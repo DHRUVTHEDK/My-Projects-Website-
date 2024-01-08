@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</html>    
+<body>
+    <div class="main">
+       <nav>
+         <div class="logo">
+            <img src="Microsoft.png">
+         </div>
+         <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+         </div>
+       </nav>
+       <!------NEW CATAGORY OF INFO.---->
+        <div class="information">
+         <div class="Overlay"></div>
+            <div><img src="Img/Mobile.png" class="Mobile"></div>
+            <div id="circle">
+                <div class="features one"><img src="Img/Camara.png">
+                    <div>
+                        <h1>Camara</h1>
+                        <p>Wide angle</p>
+
+                    </div>
+                </div>
+                <div class="features two"><img src="Img/Display.jpg">
+                    <div>
+                        <h1>Display</h1>
+                        <p>11 inch Amoled</p>
+
+                    </div>
+                </div>
+                <div class="features three"><img src="Img/Proccesor.png">
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon 840+</p>
+
+                    </div>
+                </div>
+                <div class="features four"><img src="Img/Batter.jpg">
+                    <div>
+                        <h1>Battery</h1>
+                        <p>5000Mah One-Day</p>
+
+                    </div>
+                </div>
+
+            </div>
+         </div>
+        <div class="controls">
+           <img src="Img/UP.png" id="UP">
+           <h3>Features</h3>
+           <img src="Img/UP.png" id="DOWN">
+        </div>
+
+
+    </div>
+
+    <script>
+
+       var circle = document.getElementById("circle");
+       var UP = document.getElementById("UP");
+       var DOWN = document.getElementById("DOWN");
+        
+       var rotateValue = circle.style.rotate;
+       var rotateSum;
+         
+       UP.onclick=function()
+       {
+        rotateSum = (rotateValue ? rotateValue : 0) + -90
+        circle.style.transform = `rotate(${rotateSum}deg)`;
+        rotateValue = rotateSum;
+       }
+
+       DOWN.onclick=function()
+       {
+        rotateSum = (rotateValue ? rotateValue : 0) + 90
+        circle.style.transform =  `rotate(${rotateSum}deg)`;
+        rotateValue = rotateSum;
+       }
+
+    </script>
+
+</body>
+</html>
